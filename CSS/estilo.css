@@ -1,0 +1,18 @@
+body {
+    background-image:  url("img/madera.jpg");
+    background-attachment: fixed; 
+    background-position: center center; 
+    
+}
+#cos {
+    background-color: white;
+}
+#cosTaula {
+    background-color: white; 
+}
+.colorTaula {
+    background-color: white;
+}
+.table {
+    background-color: white;
+}

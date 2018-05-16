@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fotografies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-XI0PIujkSZEzZ5m8WTEm+krRuIpfO+vHrEznaIrhTAkbrbIvfs11kzCqUarPR7yn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "JS/document.js"></script>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Fotografies Flickr</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:location.reload()">Refrescar la pàgina<span class="sr-only">(current)</span></a>
+                </li><!--Es refresca la pàgina per a una nova recerca-->
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.com/search"><!--cercardor a Google-->
+                <A HREF="http://www.google.com/"></A>
+                <input class="form-control mr-sm-2" type="text" placeholder="Cercador de Google" type="search" name=q size=31 maxlength=255 value=""> <!--Cercador de Google incorporat a la pàgina-->
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="material-icons">search</i></button>
+            </form>
+        </div>
+    </nav>
+    <div class="container" id = "cos">
+        <br><br>
+        <h1> CERCA </h1>
+        <form id="formulari"><!--Formulari principal enllaçat a la funció JS principal-->
+            <div class="form-group">
+                <label for="etiquetes">Etiquetes:</label>
+                <input type="text" class="form-control" id="etiquetes" placeholder="Introdueix les etiquetes">
+                <small id="emailHelp" class="form-text text-muted">Introdueix les paraules que vulguis cercar separades per comes o espais.</small>
+            </div>
+            <div class="form-group">
+                <label for="incloure">Incloure:</label>
+                <select class="form-control" id="incloure">
+                    <option value="all">Totes</option>
+                    <option value="any">Algunes</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Cercar</button>
+        </form>
+        <br><br>
+        <div class = "colorTaula">
+        <h1>Resultats</h1>
+        <table id="taula" class="table"><!--Taula buida on es posen els resultats de la recerca-->
+            <thead>
+                <tr>
+                    <th>Títol i Autor</th>
+                    <th>Enllaç i etiquetes</th>
+                    <th>Fotografia i Data de publicació</th>
+                </tr>
+            </thead>
+            <tbody id= "cosTaula">
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
