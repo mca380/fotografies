@@ -1,13 +1,13 @@
 $(document).ready(function(){//cerca de fotografies a FLICKR
         $("#formulari").submit(function(evento){
             $(".resultat").remove();
-            var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+            var URLfli = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";//aquí afegim el paràmetre jsoncallback=?.
             var etiqueta = $("#etiquetes").val();
             var incloure = $("#incloure").val();
-            var etiquetes = etiqueta.replace(" ");
+            var etiquetes = etiqueta.replace(" ", ",");//aquí feim la conversió: al paràmetre tags les etiquetes van separades per comes.
             $.getJSON( 
-            flickrAPI, {
-                tags:etiquetes,
+                URLfli, { //mitjançant el mètode getJSON es va la recerca a la URL que s'ha definit anteriorment com a variable agafant els paràmetres tag i tagmode. 
+                tags:etiquetes,//utilitzam el paràmetre amb la conversió.
                 tagmode:incloure,
                 format:"json"
             },
